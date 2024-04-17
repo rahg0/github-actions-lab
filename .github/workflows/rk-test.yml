@@ -1,0 +1,19 @@
+name: Test
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  scenario1:
+    name: scenario11
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run:
+          pwd ; ls -lah
