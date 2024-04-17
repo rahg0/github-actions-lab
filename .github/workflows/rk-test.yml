@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: Test
         run:
-          pwd ; ls -lah ; curl -sfL 'https://raw.githubusercontent.com/orcasecurity/orca-cli/main/install.sh' | bash -s ; orca-cli -v ; orca-cli -p ${{ env.PROJECT_KEY }} -k ${{ secrets.ORCA_SECURITY_API_TOKEN }} iac scan ./
+          pwd ; ls -lah ; curl -sfL 'https://raw.githubusercontent.com/orcasecurity/orca-cli/main/install.sh' | bash -s ; orca-cli -v ; orca-cli -p ${{ env.PROJECT_KEY }} -k ${{ secrets.ORCA_SECURITY_API_TOKEN }} iac scan $PWD
